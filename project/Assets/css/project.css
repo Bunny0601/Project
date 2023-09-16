@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 99;
+}
+.nav-head {
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 30px;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.nav_bar {
+  font-size: 18px;
+  margin-left: 25px;
+  margin-top: 35px;
+}
+.nav_bar_dropdown {
+  font-size: 18px;
+  margin-left: 25px;
+  margin-top: 35px;
+}
+.nav_bar_dropdown ul {
+  background-color: white;
+  list-style: none;
+  display: none;
+}
+.nav_bar_dropdown ul li {
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+}
+.nav_bar_dropdown:hover ul {
+  display: block;
+  position: absolute;
+  margin-top: 20px;
+  border-top: aqua solid;
+  background-color: white;
+}
+a {
+  text-decoration: none;
+}
+.box {
+  margin-left: 300px;
+  margin-top: 25px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: relative;
+}
+.cart-count {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+#cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-top: 10px;
+}
+.home {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/Assets/image/hero_1.jpg);
+}
+.inside_home {
+  color: white;
+  padding: 250px;
+  margin-left: 250px;
+}
+.heading_one {
+  margin-top: 50px;
+  margin-left: 25px;
+  letter-spacing: 1px;
+}
+.heading_two {
+  margin-top: 10px;
+  margin-left: 25px;
+
+  font-size: 60px;
+  font-weight: bolder;
+}
+.button_shopnow {
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-left: 125px;
+  border-radius: 5px;
+  background-color: aqua;
+  width: 200px;
+  height: 50px;
+  color: rgb(4, 4, 49);
+}
+/* --------------------project js-------------------------- */
+
+.store {
+  max-width: 1200px;
+  padding: 4rem;
+  margin: auto;
+  width: 100%;
+}
+.store h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+}
+
+.shop-content {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 1.5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+.medicine-box {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+  border-radius: 3px;
+}
+
+.pic {
+  overflow: hidden;
+}
+
+.pic:hover img {
+  transform: scale(1.1);
+}
+
+.food-img {
+  transition: 0.4s;
+  object-fit: cover;
+}
+
+.medicine-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6348;
+}
+
+.medicine-price {
+  font-weight: 500;
+}
+
+.add-cart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #2ed573;
+  color: white;
+  padding: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.add-cart:hover {
+  background-color: rgba(255, 0, 0, 0.786);
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+  z-index: 100;
+}
+
+.cart-active {
+  right: 0;
+  transition: 0.5s;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.cart-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-medicine-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #ff6348;
+  font-weight: 500;
+}
+
+.cart-price {
+  font-weight: 500;
+}
+
+.cart-quantity {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove {
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.total-price {
+  margin-left: 0.5rem;
+}
+
+.btn-buy {
+  padding: 12px 20px;
+  background-color: #2f3542;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#cart-close {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* ------------------- About-------------- */
+.about {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  background-color: #2f3542;
+}
+.about_one {
+  margin-top: 50px;
+  margin-left: 150px;
+  width: 600px;
+  height: 300px;
+  background-size: 550px 325px;
+  background-repeat: no-repeat;
+  background-image: url(/Assets/image/bg_1.jpg);
+}
+.about_one h3 {
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.about_one p {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 250px;
+}
+.about_two {
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 600px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/Assets/image/bg_2.jpg);
+}
+.about_two h3 {
+  margin-left: 250px;
+  margin-top: 50px;
+}
+.about_two p {
+  margin-top: 10px;
+  width: 250px;
+  margin-left: 250px;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+.container_one {
+  margin-top: 75px;
+  margin-left: 150px;
+  width: 350px;
+}
+.container_one h4 {
+  font-size: 25px;
+}
+.container_one p {
+  margin-top: 50px;
+  color: rgb(103, 103, 103);
+}
+.container_two {
+  margin-left: 200px;
+  margin-top: 75px;
+  list-style: none;
+  color: rgb(103, 103, 103);
+}
+.container_two h4 {
+  color: black;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+.container_three {
+  margin-left: 250px;
+  margin-top: 75px;
+}
+.container_three h4 {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+.container_three address {
+  width: 250px;
+  margin-bottom: 10px;
+}
+.container_four {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 26%;
+  color: gray;
+}

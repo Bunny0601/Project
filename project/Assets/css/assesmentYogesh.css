@@ -1,0 +1,8 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div {
+  border: 0px solid black;
+}
